@@ -52,7 +52,6 @@ deploy:
     secure: "$HEROKU_API_KEY"
   app: api-account-launch
   on:
-    tags: true
     repo: "adilsonsilva/api-account-launch"
 # Send the message of success after the deploy is done properly
 after_deploy:
