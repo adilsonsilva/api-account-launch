@@ -33,7 +33,7 @@ after_success:
   - export TAG=`if [ ! -z "$TRAVIS_TAG" ]; then echo "$TRAVIS_TAG"; else echo "$TRAVIS_BRANCH--$COMMIT"; fi`
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - docker-compose build
-  - docker tag adilsonsilva86/api-account-launch:latest $Using --password via the CLI is insecure. Use --password-stdin.:$TAG
+  - docker tag adilsonsilva86/api-account-launch:latest adilsonsilva86/api-account-launch:$TAG
   - docker push adilsonsilva86/api-account-launch:$TAG
   - export TITLE="adilsonsilva86/api-account-launch:$TAG is built properly and pushed to Dockerhub"
   - export TIMESTAMP=`date`
