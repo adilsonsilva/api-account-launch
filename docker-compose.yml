@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    image: adilsonsilva86/api-account-launch:latest
+    container_name: api-account-launch
+    ports:
+      - "8080:8080"

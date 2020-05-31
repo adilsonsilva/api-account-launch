@@ -1,4 +1,4 @@
-package br.com.apiaccountlaunch.controller;
+package br.com.account_launch.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
