@@ -44,6 +44,11 @@ after_success:
 after_failure:
   - export TITLE="Travis:$TRAVIS_JOB_ID -- build job is failed"
   - export TEXT=[datetime]:`date`
+
+branches:
+  only:
+  - master
+
 # Allow Travis to help deploy the app on Heroku
 deploy:
   provider: heroku
@@ -53,6 +58,7 @@ deploy:
   on:
     tags: true
     repo: "adilsonsilva86/api-account-launch"
+    branch: master
 # Send the message of success after the deploy is done properly
 after_deploy:
   - export TITLE="🎉🎉🎉New version $TAG is deployed to Heroku production🎉🎉🎉"
