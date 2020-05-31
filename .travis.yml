@@ -46,8 +46,9 @@ after_failure:
   - export TEXT=[datetime]:`date`
 
 branches:
-  only:
-  - master
+    only:
+    - master
+    - /v\d+\.\d+[a-z]/
 
 # Allow Travis to help deploy the app on Heroku
 deploy:
