@@ -55,11 +55,7 @@ deploy:
   provider: heroku
   api-key:
     secure: "$HEROKU_API_KEY"
-  app: api-account-launch
-  on:
-    tags: true
-    repo: "adilsonsilva86/api-account-launch"
-    branch: master
+
 # Send the message of success after the deploy is done properly
 after_deploy:
   - export TITLE="🎉🎉🎉New version $TAG is deployed to Heroku production🎉🎉🎉"
