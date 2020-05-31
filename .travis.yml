@@ -45,11 +45,6 @@ after_failure:
   - export TITLE="Travis:$TRAVIS_JOB_ID -- build job is failed"
   - export TEXT=[datetime]:`date`
 
-branches:
-    only:
-    - master
-    - /v\d+\.\d+[a-z]/
-
 # Allow Travis to help deploy the app on Heroku
 deploy:
   provider: heroku
